@@ -6,7 +6,7 @@ const cors = require('cors')
 app.use(express.json())
 app.use(cors())
 
-app.use(function (req, res, next) {
+function setHeaderFunc (req, res, next) {
 
     // Website you wish to allow to connect
     res.setHeader('Access-Control-Allow-Origin', 'https://ujvaljob.com');
@@ -23,7 +23,9 @@ app.use(function (req, res, next) {
 
     // Pass to next layer of middleware
     next();
-});
+}
+
+app.use(setHeaderFunc);
 
 app.post('/order', (req, res) => {
 	const authHeader = `Basic ${btoa('rzp_test_IMzw5tP8UzxP6Q:auOjL7nS14GfjPEEGCjZYmRf')}`;
