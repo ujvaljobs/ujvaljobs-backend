@@ -4,9 +4,7 @@ const port = 3001;
 const app = express();
 const cors = require('cors')
 app.use(express.json())
-app.use(cors({
-	origin: "https://ujvaljob.com"
-}))
+app.use(cors())
 
 
 app.post('/order', (req, res) => {
