@@ -9,7 +9,7 @@ app.use(cors({
 }))
 
 
-app.post('/order', (req, res) => {
+app.post('/', (req, res) => {
 	const authHeader = `Basic ${btoa('rzp_test_IMzw5tP8UzxP6Q:auOjL7nS14GfjPEEGCjZYmRf')}`;
 	axios({
 		method: 'post',
