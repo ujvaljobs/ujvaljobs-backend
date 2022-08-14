@@ -5,7 +5,7 @@ const app = express();
 const cors = require('cors')
 app.use(express.json())
 app.use(cors({
-	origin: '*'
+	origin: 'http://ujvaljob.com/'
 }))
 
 
