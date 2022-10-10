@@ -10,7 +10,7 @@ app.use(cors({
 
 
 app.get('/', (req, res) => {
-	const authHeader = `Basic ${btoa('rzp_test_IMzw5tP8UzxP6Q:auOjL7nS14GfjPEEGCjZYmRf')}`;
+	const authHeader = `Basic ${btoa('rzp_live_i1A7jFovCyA64k:h0GHl1XGT3BbR5En86A1QgCq')}`;
 	axios({
 		method: 'post',
 		url: `https://api.razorpay.com/v1/orders`,
