@@ -6,12 +6,15 @@ require('dotenv').config()
 const cors = require('cors')
 app.use(express.json())
 app.use(cors({
-	origin: 'http://ujvaljob.com/'
+	origin: 'https://ujvaljob.com/'
 }))
 
-
 app.get('/', (req, res) => {
-	const authHeader = `Basic ${btoa(`${process.env.KEY}:${process.env.SECRET}`)}`;
+	res.send('Hello World')
+})
+
+app.post('/order', (req, res) => {
+	const authHeader = `Basic ${btoa('rzp_live_i1A7jFovCyA64k:h0GHl1XGT3BbR5En86A1QgCq')}`;
 	axios({
 		method: 'post',
 		url: `https://api.razorpay.com/v1/orders`,
