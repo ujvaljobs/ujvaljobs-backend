@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 })
 
 app.post('/order', (req, res) => {
-	const authHeader = `Basic ${btoa('rzp_live_i1A7jFovCyA64k:h0GHl1XGT3BbR5En86A1QgCq')}`;
+	const authHeader = `Basic ${btoa('rzp_live_KvV5bL42EhSq9s:ePUjZNXSsGSdV7E9JL3pEbz9')}`;
 	axios({
 		method: 'post',
 		url: `https://api.razorpay.com/v1/orders`,
