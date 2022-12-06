@@ -6,7 +6,7 @@ require('dotenv').config()
 const cors = require('cors')
 app.use(express.json())
 app.use(cors({
-	origin: ['https://ujvaljob.com', 'http://localhost:5500']
+	origin: ['https://ujvaljob.com', 'http://localhost:5500', 'https://www.ujvaljob.com']
 }))
 
 app.get('/', (req, res) => {
